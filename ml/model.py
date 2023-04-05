@@ -1,3 +1,4 @@
+import joblib
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from sklearn.ensemble import RandomForestClassifier
 
@@ -61,4 +62,39 @@ def inference(model, X):
     preds : np.array
         Predictions from the model.
     """
-    pass
+    preds = model.predict(X)
+    return preds
+
+def save_model(model, encoder, lb):
+    """ Save the model to a file.
+
+    Inputs
+    ------
+    model : ???
+        Trained machine learning model.
+    encoder : ???
+        Encoder used to transform the data.
+    lb : ???
+        Label encoder used to transform the labels.
+    """
+
+    joblib.dump(model, "model/model.joblib")
+    joblib.dump(encoder, "model/encoder.joblib")
+    joblib.dump(lb, "model/lb.joblib")
+
+def load_model():
+    """ Load the model from a file.
+
+    Returns
+    -------
+    model : ???
+        Trained machine learning model.
+    encoder : ???
+        Encoder used to transform the data.
+    lb : ???
+        Label encoder used to transform the labels.
+    """
+    model = joblib.load("model/model.joblib")
+    encoder = joblib.load("model/encoder.joblib")
+    lb = joblib.load("model/lb.joblib")
+    return model, encoder, lb
