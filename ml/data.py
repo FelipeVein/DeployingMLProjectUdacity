@@ -68,3 +68,22 @@ def process_data(
 
     X = np.concatenate([X_continuous, X_categorical], axis=1)
     return X, y, encoder, lb
+
+def slice_data(df, categorical_features=None):
+    """ 
+    Slice the data into slices of data that have the same value for a specific categorical feature.
+    Parameters
+    ----------
+    df : pd.DataFrame
+        Data to be sliced.
+    categorical_features : str
+        Categorical feature to slice the data on.
+    Returns
+    -------
+    slices : list[pd.DataFrame]
+        Slices of data.
+    """
+    slices = {}
+    for val in df[categorical_features].unique():
+        slices[val] = df[df[categorical_features] == val]
+    return slices
