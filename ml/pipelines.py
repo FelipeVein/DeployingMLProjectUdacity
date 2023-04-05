@@ -30,7 +30,7 @@ def training_pipeline():
     # Validate model
     preds = inference(model, X_test)
     precision, recall, fbeta = compute_model_metrics(y_test, preds)
-    print(f"Precision: {precision}, Recall: {recall}, F1: {fbeta}")
+    print(f"Precision: {precision}, Recall: {recall}, F-beta: {fbeta}")
     # Save model
     save_model(model, encoder, lb)
     
@@ -102,7 +102,7 @@ def slice_performance():
     df_train, df_test = load_data()
     # Save printout to file
     # also create a pandas dataframe with the results
-    df_results = pd.DataFrame(columns=["Slice", "Precision", "Recall", "F1", "Support"])
+    df_results = pd.DataFrame(columns=["Slice", "Precision", "Recall", "F-beta", "Support"])
     with open("slice_performance.txt", "w") as f:
         sys.stdout = f
         # Slice data by categorical feature
@@ -115,14 +115,14 @@ def slice_performance():
                 precision, recall, fbeta = compute_model_metrics(y_true, preds)
                 print(f"Precision: {precision}, " + \
                       f"Recall: {recall}, " + \
-                      f"F1: {fbeta}, " + \
+                      f"F-beta: {fbeta}, " + \
                       f"Support: {len(slice_df)}")
                 print("")
                 df_results = df_results.append({
                     "Slice": f"{feature}={slice_name}",
                     "Precision": precision,
                     "Recall": recall,
-                    "F1": fbeta,
+                    "F-beta": fbeta,
                     "Support": len(slice_df)
                 }, ignore_index=True)
     # Reset printout to console
