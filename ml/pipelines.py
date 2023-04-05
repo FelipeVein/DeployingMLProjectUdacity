@@ -101,6 +101,8 @@ def slice_performance():
     # Load data
     df_train, df_test = load_data()
     # Save printout to file
+    # also create a pandas dataframe with the results
+    df_results = pd.DataFrame(columns=["Slice", "Precision", "Recall", "F1", "Support"])
     with open("slice_performance.txt", "w") as f:
         sys.stdout = f
         # Slice data by categorical feature
@@ -111,7 +113,19 @@ def slice_performance():
                 preds = prediction_pipeline(slice_df, model, encoder, lb, process=True)
                 y_true = lb.transform(slice_df[LABEL])
                 precision, recall, fbeta = compute_model_metrics(y_true, preds)
-                print(f"Precision: {precision}, Recall: {recall}, F1: {fbeta}, Support: {len(slice_df)}")
+                print(f"Precision: {precision}, " + \
+                      f"Recall: {recall}, " + \
+                      f"F1: {fbeta}, " + \
+                      f"Support: {len(slice_df)}")
                 print("")
+                df_results = df_results.append({
+                    "Slice": f"{feature}={slice_name}",
+                    "Precision": precision,
+                    "Recall": recall,
+                    "F1": fbeta,
+                    "Support": len(slice_df)
+                }, ignore_index=True)
     # Reset printout to console
     sys.stdout = sys.__stdout__
+    # Save results to file
+    df_results.to_csv("slice_performance.csv", index=False)
