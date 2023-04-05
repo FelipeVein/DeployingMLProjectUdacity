@@ -1,7 +1,7 @@
 import joblib
+import os
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from sklearn.ensemble import RandomForestClassifier
-
 
 # Optional: implement hyperparameter tuning.
 def train_model(X_train, y_train):
@@ -77,7 +77,8 @@ def save_model(model, encoder, lb):
     lb : ???
         Label encoder used to transform the labels.
     """
-
+    if not os.path.exists("model"):
+        os.mkdir("model")
     joblib.dump(model, "model/model.joblib")
     joblib.dump(encoder, "model/encoder.joblib")
     joblib.dump(lb, "model/lb.joblib")
