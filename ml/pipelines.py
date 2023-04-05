@@ -7,6 +7,9 @@ from ml.constants import CATEGORICAL_FEATURES, LABEL, DATA_FILE
 from ml.model import compute_model_metrics, inference, save_model, train_model, load_model
 
 def training_pipeline():
+    """
+    Trains a machine learning model and saves it.
+    """
     # Load data
     df_train, df_test = load_data()
     # Process data
