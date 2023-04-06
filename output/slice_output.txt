@@ -1,0 +1,297 @@
+Slice: workclass=Private
+Precision: 0.7342657342657343, Recall: 0.6293706293706294, F-beta: 0.6777837547068316, Support: 4578
+
+Slice: workclass=State-gov
+Precision: 0.7424242424242424, Recall: 0.6712328767123288, F-beta: 0.7050359712230216, Support: 254
+
+Slice: workclass=Self-emp-not-inc
+Precision: 0.7115384615384616, Recall: 0.4713375796178344, F-beta: 0.5670498084291188, Support: 498
+
+Slice: workclass=Self-emp-inc
+Precision: 0.7586206896551724, Recall: 0.7457627118644068, F-beta: 0.752136752136752, Support: 212
+
+Slice: workclass=Federal-gov
+Precision: 0.7647058823529411, Recall: 0.7428571428571429, F-beta: 0.7536231884057971, Support: 191
+
+Slice: workclass=Local-gov
+Precision: 0.7857142857142857, Recall: 0.7, F-beta: 0.7403846153846153, Support: 387
+
+Slice: workclass=?
+Precision: 0.6296296296296297, Recall: 0.40476190476190477, F-beta: 0.4927536231884058, Support: 389
+
+Slice: workclass=Without-pay
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 4
+
+Slice: education=Some-college
+Precision: 0.6805555555555556, Recall: 0.5306859205776173, F-beta: 0.5963488843813387, Support: 1485
+
+Slice: education=HS-grad
+Precision: 0.6431718061674009, Recall: 0.42318840579710143, F-beta: 0.5104895104895104, Support: 2085
+
+Slice: education=Bachelors
+Precision: 0.75, Recall: 0.7133333333333334, F-beta: 0.7312072892938497, Support: 1053
+
+Slice: education=Masters
+Precision: 0.8317307692307693, Recall: 0.8357487922705314, F-beta: 0.8337349397590362, Support: 369
+
+Slice: education=Assoc-acdm
+Precision: 0.7105263157894737, Recall: 0.574468085106383, F-beta: 0.6352941176470589, Support: 198
+
+Slice: education=7th-8th
+Precision: 1.0, Recall: 0.0, F-beta: 0.0, Support: 141
+
+Slice: education=11th
+Precision: 1.0, Recall: 0.2727272727272727, F-beta: 0.42857142857142855, Support: 225
+
+Slice: education=Assoc-voc
+Precision: 0.6792452830188679, Recall: 0.5714285714285714, F-beta: 0.6206896551724137, Support: 273
+
+Slice: education=Prof-school
+Precision: 0.8191489361702128, Recall: 0.9166666666666666, F-beta: 0.8651685393258427, Support: 116
+
+Slice: education=9th
+Precision: 1.0, Recall: 0.3333333333333333, F-beta: 0.5, Support: 115
+
+Slice: education=5th-6th
+Precision: 1.0, Recall: 0.5, F-beta: 0.6666666666666666, Support: 62
+
+Slice: education=10th
+Precision: 0.3333333333333333, Recall: 0.16666666666666666, F-beta: 0.2222222222222222, Support: 183
+
+Slice: education=Doctorate
+Precision: 0.847457627118644, Recall: 0.8771929824561403, F-beta: 0.8620689655172413, Support: 77
+
+Slice: education=12th
+Precision: 1.0, Recall: 0.4, F-beta: 0.5714285714285715, Support: 98
+
+Slice: education=1st-4th
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 23
+
+Slice: education=Preschool
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 10
+
+Slice: marital-status=Divorced
+Precision: 0.7254901960784313, Recall: 0.3592233009708738, F-beta: 0.4805194805194805, Support: 920
+
+Slice: marital-status=Married-civ-spouse
+Precision: 0.7326246933769419, Recall: 0.6808510638297872, F-beta: 0.7057896809767625, Support: 2950
+
+Slice: marital-status=Never-married
+Precision: 0.82, Recall: 0.39805825242718446, F-beta: 0.5359477124183006, Support: 2126
+
+Slice: marital-status=Separated
+Precision: 1.0, Recall: 0.42105263157894735, F-beta: 0.5925925925925926, Support: 209
+
+Slice: marital-status=Widowed
+Precision: 1.0, Recall: 0.15789473684210525, F-beta: 0.2727272727272727, Support: 208
+
+Slice: marital-status=Married-spouse-absent
+Precision: 1.0, Recall: 0.25, F-beta: 0.4, Support: 96
+
+Slice: marital-status=Married-AF-spouse
+Precision: 1.0, Recall: 0.0, F-beta: 0.0, Support: 4
+
+Slice: occupation=Adm-clerical
+Precision: 0.6164383561643836, Recall: 0.46875, F-beta: 0.5325443786982248, Support: 726
+
+Slice: occupation=Exec-managerial
+Precision: 0.7901907356948229, Recall: 0.7304785894206549, F-beta: 0.7591623036649214, Support: 838
+
+Slice: occupation=Machine-op-inspct
+Precision: 0.5277777777777778, Recall: 0.40425531914893614, F-beta: 0.45783132530120485, Support: 378
+
+Slice: occupation=Craft-repair
+Precision: 0.6821705426356589, Recall: 0.4861878453038674, F-beta: 0.567741935483871, Support: 821
+
+Slice: occupation=Prof-specialty
+Precision: 0.7935656836461126, Recall: 0.7551020408163265, F-beta: 0.7738562091503268, Support: 828
+
+Slice: occupation=Sales
+Precision: 0.7314285714285714, Recall: 0.6666666666666666, F-beta: 0.6975476839237057, Support: 729
+
+Slice: occupation=Handlers-cleaners
+Precision: 0.8, Recall: 0.3333333333333333, F-beta: 0.47058823529411764, Support: 273
+
+Slice: occupation=Other-service
+Precision: 0.75, Recall: 0.23076923076923078, F-beta: 0.3529411764705882, Support: 667
+
+Slice: occupation=Protective-serv
+Precision: 0.75, Recall: 0.5714285714285714, F-beta: 0.6486486486486486, Support: 136
+
+Slice: occupation=Priv-house-serv
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 26
+
+Slice: occupation=Transport-moving
+Precision: 0.5510204081632653, Recall: 0.421875, F-beta: 0.4778761061946903, Support: 317
+
+Slice: occupation=?
+Precision: 0.6296296296296297, Recall: 0.40476190476190477, F-beta: 0.4927536231884058, Support: 389
+
+Slice: occupation=Farming-fishing
+Precision: 0.45454545454545453, Recall: 0.17857142857142858, F-beta: 0.25641025641025644, Support: 193
+
+Slice: occupation=Tech-support
+Precision: 0.7254901960784313, Recall: 0.7254901960784313, F-beta: 0.7254901960784313, Support: 189
+
+Slice: occupation=Armed-Forces
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 3
+
+Slice: relationship=Not-in-family
+Precision: 0.7872340425531915, Recall: 0.39361702127659576, F-beta: 0.524822695035461, Support: 1702
+
+Slice: relationship=Wife
+Precision: 0.7142857142857143, Recall: 0.6643356643356644, F-beta: 0.6884057971014493, Support: 322
+
+Slice: relationship=Husband
+Precision: 0.7346189164370982, Recall: 0.6837606837606838, F-beta: 0.7082779991146525, Support: 2590
+
+Slice: relationship=Unmarried
+Precision: 0.8, Recall: 0.26666666666666666, F-beta: 0.4, Support: 702
+
+Slice: relationship=Own-child
+Precision: 1.0, Recall: 0.17647058823529413, F-beta: 0.3, Support: 1019
+
+Slice: relationship=Other-relative
+Precision: 1.0, Recall: 0.375, F-beta: 0.5454545454545454, Support: 178
+
+Slice: race=White
+Precision: 0.7360655737704918, Recall: 0.6288515406162465, F-beta: 0.6782477341389728, Support: 5595
+
+Slice: race=Black
+Precision: 0.7551020408163265, Recall: 0.5692307692307692, F-beta: 0.6491228070175438, Support: 599
+
+Slice: race=Other
+Precision: 1.0, Recall: 0.6666666666666666, F-beta: 0.8, Support: 55
+
+Slice: race=Asian-Pac-Islander
+Precision: 0.7678571428571429, Recall: 0.6935483870967742, F-beta: 0.7288135593220338, Support: 193
+
+Slice: race=Amer-Indian-Eskimo
+Precision: 0.625, Recall: 0.5, F-beta: 0.5555555555555556, Support: 71
+
+Slice: sex=Female
+Precision: 0.7160493827160493, Recall: 0.4978540772532189, F-beta: 0.5873417721518988, Support: 2126
+
+Slice: sex=Male
+Precision: 0.7412765957446809, Recall: 0.6509715994020927, F-beta: 0.6931953840031835, Support: 4387
+
+Slice: native-country=United-States
+Precision: 0.7378400659521847, Recall: 0.6236933797909407, F-beta: 0.6759818731117825, Support: 5870
+
+Slice: native-country=Mexico
+Precision: 1.0, Recall: 0.3333333333333333, F-beta: 0.5, Support: 114
+
+Slice: native-country=Puerto-Rico
+Precision: 0.8333333333333334, Recall: 0.8333333333333334, F-beta: 0.8333333333333334, Support: 22
+
+Slice: native-country=El-Salvador
+Precision: 0.5, Recall: 1.0, F-beta: 0.6666666666666666, Support: 20
+
+Slice: native-country=?
+Precision: 0.6785714285714286, Recall: 0.6129032258064516, F-beta: 0.6440677966101694, Support: 125
+
+Slice: native-country=Columbia
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 6
+
+Slice: native-country=Poland
+Precision: 0.5, Recall: 1.0, F-beta: 0.6666666666666666, Support: 14
+
+Slice: native-country=Cambodia
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 3
+
+Slice: native-country=Germany
+Precision: 0.7857142857142857, Recall: 0.8461538461538461, F-beta: 0.8148148148148148, Support: 32
+
+Slice: native-country=Philippines
+Precision: 1.0, Recall: 0.6875, F-beta: 0.8148148148148148, Support: 35
+
+Slice: native-country=Canada
+Precision: 0.7142857142857143, Recall: 0.625, F-beta: 0.6666666666666666, Support: 22
+
+Slice: native-country=Ecuador
+Precision: 1.0, Recall: 0.5, F-beta: 0.6666666666666666, Support: 5
+
+Slice: native-country=Italy
+Precision: 0.75, Recall: 0.75, F-beta: 0.75, Support: 14
+
+Slice: native-country=Cuba
+Precision: 0.8, Recall: 0.8, F-beta: 0.8000000000000002, Support: 19
+
+Slice: native-country=Iran
+Precision: 0.3333333333333333, Recall: 0.2, F-beta: 0.25, Support: 12
+
+Slice: native-country=Jamaica
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 13
+
+Slice: native-country=Haiti
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 6
+
+Slice: native-country=South
+Precision: 0.3333333333333333, Recall: 0.5, F-beta: 0.4, Support: 13
+
+Slice: native-country=Taiwan
+Precision: 0.75, Recall: 0.75, F-beta: 0.75, Support: 11
+
+Slice: native-country=Dominican-Republic
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 8
+
+Slice: native-country=Ireland
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 5
+
+Slice: native-country=Japan
+Precision: 0.75, Recall: 0.75, F-beta: 0.75, Support: 11
+
+Slice: native-country=Scotland
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 3
+
+Slice: native-country=India
+Precision: 0.8571428571428571, Recall: 0.75, F-beta: 0.7999999999999999, Support: 21
+
+Slice: native-country=Trinadad&Tobago
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 3
+
+Slice: native-country=Hungary
+Precision: 1.0, Recall: 0.5, F-beta: 0.6666666666666666, Support: 3
+
+Slice: native-country=England
+Precision: 0.5, Recall: 0.5, F-beta: 0.5, Support: 14
+
+Slice: native-country=Laos
+Precision: 1.0, Recall: 0.0, F-beta: 0.0, Support: 4
+
+Slice: native-country=Hong
+Precision: 0.5, Recall: 1.0, F-beta: 0.6666666666666666, Support: 8
+
+Slice: native-country=Greece
+Precision: 1.0, Recall: 0.0, F-beta: 0.0, Support: 7
+
+Slice: native-country=Portugal
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 6
+
+Slice: native-country=Guatemala
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 13
+
+Slice: native-country=China
+Precision: 0.8888888888888888, Recall: 1.0, F-beta: 0.9411764705882353, Support: 18
+
+Slice: native-country=France
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 5
+
+Slice: native-country=Nicaragua
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 7
+
+Slice: native-country=Vietnam
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 5
+
+Slice: native-country=Thailand
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 5
+
+Slice: native-country=Peru
+Precision: 0.0, Recall: 0.0, F-beta: 0.0, Support: 5
+
+Slice: native-country=Honduras
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 4
+
+Slice: native-country=Yugoslavia
+Precision: 1.0, Recall: 1.0, F-beta: 1.0, Support: 2
+
