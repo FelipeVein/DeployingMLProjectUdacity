@@ -106,7 +106,7 @@ def slice_performance():
     # also create a pandas dataframe with the results
     df_results = pd.DataFrame(
         columns=["Slice", "Precision", "Recall", "F-beta", "Support"])
-    with open("slice_performance.txt", "w") as f:
+    with open("output/slice_performance.txt", "w") as f:
         sys.stdout = f
         # Slice data by categorical feature
         for feature in CATEGORICAL_FEATURES:
@@ -130,4 +130,4 @@ def slice_performance():
     # Reset printout to console
     sys.stdout = sys.__stdout__
     # Save results to file
-    df_results.to_csv("slice_performance.csv", index=False)
+    df_results.to_csv("output/slice_performance.csv", index=False)
