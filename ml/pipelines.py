@@ -118,13 +118,10 @@ def slice_performance():
                       f"F-beta: {fbeta}, " + \
                       f"Support: {len(slice_df)}")
                 print("")
-                df_results = df_results.append({
-                    "Slice": f"{feature}={slice_name}",
-                    "Precision": precision,
-                    "Recall": recall,
-                    "F-beta": fbeta,
-                    "Support": len(slice_df)
-                }, ignore_index=True)
+                df_results = pd.concat([df_results, pd.DataFrame(
+                    [[feature, precision, recall, fbeta, len(slice_df)]],
+                    columns=["Slice", "Precision", "Recall", "F-beta", "Support"]
+                )])
     # Reset printout to console
     sys.stdout = sys.__stdout__
     # Save results to file
