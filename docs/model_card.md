@@ -28,10 +28,15 @@ The source of the data is from `https://archive.ics.uci.edu/ml/datasets/census+i
 
 Metrics are used to judge the performance of a model. In this project, we use the following metrics:
 
-* Precision
-* Recall
-* Fbeta score
+* Precision: The ratio of true positives to the sum of true and false positives.
+* Recall: The ratio of true positives to the sum of true positives and false negatives.
+* Fbeta score: The weighted harmonic mean of precision and recall.
 
+On the evaluation data, the model has the following metrics:
+
+* Precision: 0.738
+* Recall: 0.628
+* Fbeta score: 0.679
 
 ## Ethical Considerations
 
