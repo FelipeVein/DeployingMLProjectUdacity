@@ -2,6 +2,7 @@ import pandas as pd
 from ml.data import process_data
 from ml.constants import CATEGORICAL_FEATURES
 
+
 def transform_data(requestBody, encoder, lb):
     # requestBody is not a dict, it is a class from FastAPI
     # https://fastapi.tiangolo.com/tutorial/request-body/

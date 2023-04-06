@@ -6,6 +6,7 @@ from ml.data import process_data, slice_data
 from ml.constants import CATEGORICAL_FEATURES, LABEL, DATA_FILE
 from ml.model import compute_model_metrics, inference, save_model, train_model, load_model
 
+
 def training_pipeline():
     """
     Trains a machine learning model and saves it.
@@ -33,9 +34,9 @@ def training_pipeline():
     print(f"Precision: {precision}, Recall: {recall}, F-beta: {fbeta}")
     # Save model
     save_model(model, encoder, lb)
-    
+
     return {"precision": precision, "recall": recall, "fbeta": fbeta,
-            "model": model, "encoder": encoder, "lb": lb, 
+            "model": model, "encoder": encoder, "lb": lb,
             "X_train": X_train, "y_train": y_train, "X_test": X_test, "y_test": y_test}
 
 
@@ -83,8 +84,9 @@ def prediction_pipeline(X, model=None, encoder=None, lb=None, process=True):
     preds = inference(model, X)
     return preds
 
+
 def slice_performance():
-    """ 
+    """
     Run the prediction pipeline on slices of data.
     Each slice is a part of the test data that has the same value for a specific categorical feature.
     Saves the performance of the model on each slice to a file.
@@ -102,7 +104,8 @@ def slice_performance():
     df_train, df_test = load_data()
     # Save printout to file
     # also create a pandas dataframe with the results
-    df_results = pd.DataFrame(columns=["Slice", "Precision", "Recall", "F-beta", "Support"])
+    df_results = pd.DataFrame(
+        columns=["Slice", "Precision", "Recall", "F-beta", "Support"])
     with open("slice_performance.txt", "w") as f:
         sys.stdout = f
         # Slice data by categorical feature
@@ -110,17 +113,19 @@ def slice_performance():
             df_test_slice = slice_data(df_test, feature)
             for slice_name, slice_df in df_test_slice.items():
                 print(f"Slice: {feature}={slice_name}")
-                preds = prediction_pipeline(slice_df, model, encoder, lb, process=True)
+                preds = prediction_pipeline(
+                    slice_df, model, encoder, lb, process=True)
                 y_true = lb.transform(slice_df[LABEL])
                 precision, recall, fbeta = compute_model_metrics(y_true, preds)
-                print(f"Precision: {precision}, " + \
-                      f"Recall: {recall}, " + \
-                      f"F-beta: {fbeta}, " + \
+                print(f"Precision: {precision}, " +
+                      f"Recall: {recall}, " +
+                      f"F-beta: {fbeta}, " +
                       f"Support: {len(slice_df)}")
                 print("")
                 df_results = pd.concat([df_results, pd.DataFrame(
                     [[feature, precision, recall, fbeta, len(slice_df)]],
-                    columns=["Slice", "Precision", "Recall", "F-beta", "Support"]
+                    columns=["Slice", "Precision",
+                             "Recall", "F-beta", "Support"]
                 )])
     # Reset printout to console
     sys.stdout = sys.__stdout__

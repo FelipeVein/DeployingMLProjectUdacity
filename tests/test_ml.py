@@ -1,5 +1,5 @@
 
-from ml.model import train_model, inference, compute_model_metrics, save_model, load_model
+from ml.model import train_model, save_model, load_model
 from ml.data import process_data
 from ml.pipelines import training_pipeline, prediction_pipeline, load_data
 import ml.constants as constants
@@ -24,6 +24,7 @@ def data():
     assert len(train.columns) == 15
     return train, test
 
+
 def test_process_data(data):
     train, test = data
     X_train, y_train, encoder, lb = process_data(
@@ -46,7 +47,6 @@ def test_process_data(data):
     assert isinstance(encoder, sklearn.preprocessing._encoders.OneHotEncoder)
     assert isinstance(lb, sklearn.preprocessing._label.LabelBinarizer)
 
-# i want to model to be send to another test function
 
 @pytest.fixture(scope="module")
 def test_train_model(data):
@@ -62,6 +62,7 @@ def test_train_model(data):
     assert isinstance(lb, sklearn.preprocessing._label.LabelBinarizer)
     return model, encoder, lb
 
+
 def test_save_and_load_model(test_train_model):
     model, encoder, lb = test_train_model
     save_model(model, encoder, lb)
@@ -69,6 +70,7 @@ def test_save_and_load_model(test_train_model):
     assert isinstance(model, sklearn.ensemble._forest.RandomForestClassifier)
     assert isinstance(encoder, sklearn.preprocessing._encoders.OneHotEncoder)
     assert isinstance(lb, sklearn.preprocessing._label.LabelBinarizer)
+
 
 def test_training_pipeline():
     output = training_pipeline()
@@ -78,6 +80,7 @@ def test_training_pipeline():
     assert isinstance(output['model'], sklearn.ensemble._forest.RandomForestClassifier)
     assert isinstance(output['encoder'], sklearn.preprocessing._encoders.OneHotEncoder)
     assert isinstance(output['lb'], sklearn.preprocessing._label.LabelBinarizer)
+
 
 def test_prediction_pipeline(data):
     train, test = data
