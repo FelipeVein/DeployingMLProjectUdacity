@@ -123,7 +123,7 @@ def slice_performance():
                       f"Support: {len(slice_df)}")
                 print("")
                 df_results = pd.concat([df_results, pd.DataFrame(
-                    [[feature, precision, recall, fbeta, len(slice_df)]],
+                    [[f"{feature}={slice_name}", precision, recall, fbeta, len(slice_df)]],
                     columns=["Slice", "Precision",
                              "Recall", "F-beta", "Support"]
                 )])
