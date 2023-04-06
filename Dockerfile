@@ -9,11 +9,11 @@ RUN pip install -r requirements.txt
 COPY . /usr/src/app
 
 # Set working directory
-WORKDIR /usr/src/app/api
+WORKDIR /usr/src/app
 
 # Expose port
-EXPOSE 8000
+EXPOSE 80
 
 # Run server
-ENTRYPOINT ["python", "app.py"]
+ENTRYPOINT ["python", "main.py"]
 
