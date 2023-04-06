@@ -65,7 +65,7 @@ def inference(model, X):
     preds = model.predict(X)
     return preds
 
-def save_model(model, encoder, lb):
+def save_model(model, encoder, lb, model_dir="model"):
     """ Save the model to a file.
 
     Inputs
@@ -79,11 +79,11 @@ def save_model(model, encoder, lb):
     """
     if not os.path.exists("model"):
         os.mkdir("model")
-    joblib.dump(model, "model/model.joblib")
-    joblib.dump(encoder, "model/encoder.joblib")
-    joblib.dump(lb, "model/lb.joblib")
+    joblib.dump(model, os.path.join(model_dir, "model.joblib"))
+    joblib.dump(encoder, os.path.join(model_dir, "encoder.joblib"))
+    joblib.dump(lb, os.path.join(model_dir, "lb.joblib"))
 
-def load_model():
+def load_model(model_dir="model"):
     """ Load the model from a file.
 
     Returns
@@ -95,7 +95,7 @@ def load_model():
     lb : ???
         Label encoder used to transform the labels.
     """
-    model = joblib.load("model/model.joblib")
-    encoder = joblib.load("model/encoder.joblib")
-    lb = joblib.load("model/lb.joblib")
+    model = joblib.load(os.path.join(model_dir, "model.joblib"))
+    encoder = joblib.load(os.path.join(model_dir, "encoder.joblib"))
+    lb = joblib.load(os.path.join(model_dir, "lb.joblib"))
     return model, encoder, lb
